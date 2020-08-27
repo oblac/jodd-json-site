@@ -2,11 +2,11 @@
 
 JavaScript Object Notation \(aka [JSON](http://json.org/)\) is a very popular lightweight data-interchange format. **Jodd JSON** is a lightweight library for \(de\)serializing Java objects into and from JSON.
 
-Before you say: "_Yet another one?_", please check what makes **Jodd JSON** different. The power of the library is its control over the process of serialization and parsing; ease of use and great performances.
+Before you say: "Yet another one?", please check what makes **Jodd JSON** unique. The power of the library is its control over the process of serialization and parsing; ease of use and great performances.
 
 ### Quick Start <a id="quick-start"></a>
 
-Let's see how it looks working with serialization:
+Let's see how to serialize:
 
 ```java
     Book book = new Book();
