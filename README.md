@@ -9,33 +9,33 @@ Before you say: "Yet another one?", please check what makes **Jodd JSON** unique
 Let's see how to serialize:
 
 ```java
-    Book book = new Book();
-    book.setName("Jodd in Action);
-    book.setYear(2018);
-    book.setAuthors(List.of(new Author("Igor")));
+Book book = new Book();
+book.setName("Jodd in Action);
+book.setYear(2018);
+book.setAuthors(List.of(new Author("Igor")));
 
-    String json = JsonSerializer.create()
-            .include("authors")
-            .serialize(book);
+String json = JsonSerializer.create()
+        .include("authors")
+        .serialize(book);
 ```
 
 The resulting JSON may look like this:
 
 ```javascript
-    {
-        "name" : "Jodd In Action",
-        "year" : 2018,
-        "authors" : [
-            { "firstName" : "Igor" }
-        ]
-    }
+{
+    "name" : "Jodd In Action",
+    "year" : 2018,
+    "authors" : [
+        { "firstName" : "Igor" }
+    ]
+}
 ```
 
 Parse the JSON back to Java:
 
 ```java
-    Book book2 = new JsonParser()
-            .parse(json, Book.class);
+Book book2 = new JsonParser()
+        .parse(json, Book.class);
 ```
 
 Pretty simple, right? But don't get blinded by the simplicity, **Jodd JSON** is pretty powerful. Did I mention it is one of the fastest JSON frameworks out there?
