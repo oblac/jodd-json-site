@@ -55,3 +55,7 @@ Pretty simple, right? But don't get blinded by the simplicity, **Jodd JSON** is 
 * flexible fine-tuning,
 * and more…
 
+### License
+
+The code is released under the `BSD-2-Clause` license. It has a minimal set of dependencies with the same or similarly open license, so you should be able to use it in any project and for any purpose.
+
