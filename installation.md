@@ -1,5 +1,5 @@
 ---
-description: Tips on how to install Jodd J library in your app
+description: Tips on how to install Jodd JSON library in your app
 ---
 
 # Installation
