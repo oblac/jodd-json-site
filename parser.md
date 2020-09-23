@@ -1,3 +1,7 @@
+---
+description: Read JSONs and create objects
+---
+
 # Parser
 
 **Jodd JSON** parser reads JSON string and converts it into objects \(i.e. object graph\). Mapping JSON data to Java objects may be tricky. **Jodd JSON** uses class and property types to map string JSON values into specific Java type. And as a bonus, it is super fast.

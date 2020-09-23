@@ -1,4 +1,4 @@
-# Fine-tuning Serialization
+# Fine-Tuning
 
 So far we have seen that `JsonSerializer` excludes the collections, and that this behavior is controlled by the `deep` flag. There is more sophisticated way on how to configure what to serialize. Serialization process can be fine-tuned: properties can be included and excluded. There are several ways how to do this.
 

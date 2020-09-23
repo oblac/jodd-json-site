@@ -1,3 +1,7 @@
+---
+description: Create JSONs from Java objects
+---
+
 # Serializer
 
 `JsonSerializer` serializes objects into JSON strings. Create an instance of the serializer, configure it and you're done! You may re-use the `JsonSerializer` instances \(i.e. configurations\). Let's see more about how serialization works.
