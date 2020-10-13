@@ -80,7 +80,7 @@ User user = jsonParser.parse(json, User.class);
 
 Using this approach, `JsonParser` can parse complex JSON strings into Java object graph, as long it can resolve the type information.
 
-#### Specifying the target type
+### Define the target type with paths
 
 To introduce some more complexity, let's say that `Inter` is an interface:
 
@@ -126,7 +126,9 @@ Map<String, Map<Long, String>> map =
 
 We changed the key type of the inner map. This is one more thing to remember:
 
-Use `map()` method to map the target type in the result object graph, specified by its path. {: .attn}
+{% hint style="warning" %}
+Use `map()` method to map the target type in the result object graph, specified by its path.
+{% endhint %}
 
 Now we have a powerful tool that can parse about any JSON to any Java type. Here is another example:
 
@@ -155,9 +157,9 @@ Map<String, Pair<Phone, Network>> complex = new JsonParser()
 
 Each value of the returned map is going to be a `Pair` of two different types.
 
-#### Alt\(ernative\) paths
+### Alt\(ernative\) paths
 
-As seen, the path can contain special names like `values` or `keys` to reference _all_ values of a map or _all_ keys of a map \(or of an array\). But you can not change the type of particular map value, since these special paths address _all_ items.
+As seen, the path can contain special names like `values` or `keys` to reference _ALL_ values of a map or _ALL_ keys of a map \(or of an array\). But you can not change the type of particular map value, since these special paths address _ALL_ items.
 
 But there is a solution to this. By enabling the alternative paths with `.useAltPaths()` we are telling `JsonParser` to match paths to current map values! By default, this option is disabled, for performance reasons \(there is some penalty because more paths are matched\).
 
