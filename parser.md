@@ -159,7 +159,7 @@ Each value of the returned map is going to be a `Pair` of two different types.
 
 As seen, the path can contain special names like `values` or `keys` to reference _all_ values of a map or _all_ keys of a map \(or of an array\). But you can not change the type of particular map value, since these special paths address _all_ items.
 
-But there is a solution to this. By enabling the alternative paths with `.useAltPaths()` we are telling `JsonParser` to match paths to current map values! By default this option is disabled, for performance reasons \(there is some penalty because more paths are matched\).
+But there is a solution to this. By enabling the alternative paths with `.useAltPaths()` we are telling `JsonParser` to match paths to current map values! By default, this option is disabled, for performance reasons \(there is some penalty because more paths are matched\).
 
 With alt paths enabled, you can reference any value on the map, too.
 
@@ -214,7 +214,7 @@ Person person = new JsonParser()
 
 ### Loose mode
 
-**Jodd Json** parser consumes only valid JSON strings. If JSON string is not valid, an exception is thrown with a detailed message of why parsing failed.
+**Jodd Json** parser consumes only valid JSON strings. If the JSON string is not valid, an exception is thrown with a detailed message of why parsing failed.
 
 But real-world often does not play by the rules ;\) Therefore, `JsonParser` may run in so-called _loose_ mode, when it can process more:
 
@@ -225,7 +225,7 @@ JsonParser jsonParser = new JsonParser().looseMode(true);
 Here is what loose mode may handle:
 
 * both single and double quotes are accepted.
-* invalid escape characters are just added to the ouput.
+* invalid escape characters are just added to the output.
 * strings may be unquoted, too.
 
 For example, `JsonParser` in loose mode may parse the following input:
@@ -241,11 +241,11 @@ This JSON is not valid, but it can be parsed, too.
 
 ### Lazy mode
 
-Finally, the performance gem. A common scenario is parsing a \(big\) JSON document only to access a few keys. For this situations we actually don't need to parse the complete JSON, only the elements that we need.
+Finally, the performance gem. A common scenario is parsing a \(big\) JSON document only to access a few keys. For these situations, we actually don't need to parse the complete JSON, only the elements that we need.
 
-**Jodd JSON** has the _lazy_ mode that provides exactly that feature. It returns the `Map` or the `List` i.e. in the lazy mode there is no sense to parse to concrete types. Returned object is lazy since the parsing happens only on key retrieval.
+**Jodd JSON** has a _lazy_ mode that provides exactly that feature. It returns the `Map` or the `List` i.e. in the lazy mode, there is no sense to parse to concrete types. The returned object is lazy since the parsing happens only on key retrieval.
 
-This may boost performance a lot \(in explained scenario\)! The downside of this approach is that JSON string is kept in memory while the returned object exists. Please use the lazy mode with care.
+This may boost performance a lot \(in the explained scenario\)! The downside of this approach is that the JSON string is kept in memory while the returned object exists. Please use the lazy mode with care.
 
 ```java
 JsonParser jsonParser = new JsonParser().lazy(true);
