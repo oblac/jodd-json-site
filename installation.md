@@ -4,7 +4,7 @@ description: Tips on how to install Jodd JSON library in your app
 
 # Installation
 
-**Jodd Lagarto** is released on Maven Central. You can use the following snippets to add it to your project:
+**Jodd JSON** is released on Maven Central. You can use the following snippets to add it to your project:
 
 {% tabs %}
 {% tab title="Maven" %}
